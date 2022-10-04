@@ -1,85 +1,111 @@
-*{
-    font-family: 'Fredoka One', cursive ;
-    background: #8f4254;
+* {
+  font-family: "Fredoka One", cursive;
+  background: #8f4254;
 }
-.title{
-    font-family: 'Nabla', cursive;
-    font-size: 3rem;
+.title {
+  font-family: "Nabla", cursive;
+  font-size: 3rem;
 }
-.page{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+.page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
-#winner__message{
-    font-family: 'Noto Sans', sans-serif;
-    color: white;
-    font-size: 3.5rem;
+#winner__message {
+  font-family: "Noto Sans", sans-serif;
+  color: white;
+  font-size: 3.5rem;
 }
 #box > button {
-    font-size: 5rem;
-    background: #8f4254;
-	border: none;
-	cursor: pointer;
+  font-size: 5rem;
+  background: #8f4254;
+  border: none;
+  cursor: pointer;
 }
-#box{
-    width: 500px;
-    height: 500px;
-    background-color: black;
-    display: grid;
-    position: relative;
-    row-gap: 4px;
-    column-gap: 4px;
-    grid-template-columns: repeat(3, 1fr);;
-    grid-template-rows: repeat(3, 1fr);;
+.show__btn {
+  display: block !important;
+}
+#btn__reload {
+  display: none;
+  padding: 10px;
+  border: white 2px solid;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+#btn__reload:hover {
+  background-color: rgb(255, 255, 255, 0.1);
+}
+#box > button:hover {
+  opacity: 0.9;
+}
+#box {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  display: grid;
+  position: relative;
+  row-gap: 4px;
+  column-gap: 4px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
-.winner::after{
-    content: '';
-    position: absolute;
-    width: 450px;
-    border-top: 3px solid white;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    top: 250px;
+.winner:hover {
+  opacity: 1;
 }
 
-.winner__case1::after{
-    top: 78px;
+.winner::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  border-top: 3px solid white;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: 250px;
 }
-.winner__case2::after{
-    top: 247px;
+
+.winner__case1::after {
+  top: 78px;
 }
-.winner__case3::after{
-    top: 415px;
+.winner__case2::after {
+  top: 247px;
 }
-.winner__case4::after{
-    transform: translate(-87.4%, 00%) rotate(90deg);
+.winner__case3::after {
+  top: 415px;
 }
-.winner__case5::after{
-    transform: translate(-50%, 00%) rotate(90deg);
+.winner__case4::after {
+  transform: translate(-87.4%, 00%) rotate(90deg);
 }
-.winner__case6::after{
-    transform: translate(-12.7%, 00%) rotate(90deg);
+.winner__case5::after {
+  transform: translate(-50%, 00%) rotate(90deg);
 }
-.winner__case7::after{
-    transform: translate(-50%, 0%) rotate(45deg);
-    top: 250px;
-    width: 600px;
+.winner__case6::after {
+  transform: translate(-12.7%, 00%) rotate(90deg);
 }
-.winner__case8::after{
-    transform: translate(-50%, 0%) rotate(-45deg);
-    top: 250px;
-    width: 600px;
+.winner__case7::after {
+  transform: translate(-50%, 0%) rotate(45deg);
+  top: 250px;
+  width: 600px;
+}
+.winner__case8::after {
+  transform: translate(-50%, 0%) rotate(-45deg);
+  top: 250px;
+  width: 600px;
 }
 
 .space__X::after {
-    content: 'X';
-    color: black;
+  content: "X";
+  color: black;
 }
 
 .space__O::after {
-    content: 'O';
-    color: black;
+  content: "O";
+  color: black;
+}
+.space__O:hover,
+.space__X:hover {
+  opacity: 1 !important;
+  cursor: default !important;
 }

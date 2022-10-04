@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo da velha</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nabla&family=Noto+Sans&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nabla&family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <main>
-        <div class="page">
-            <h1 class="title">Jogo da velha</h1>
-            <div id="box">
-                <button  onclick="mark(event, 0)"></button>
-                <button  onclick="mark(event, 1)"></button>
-                <button  onclick="mark(event, 2)"></button>
-                <button  onclick="mark(event, 3)"></button>
-                <button  onclick="mark(event, 4)"></button>
-                <button  onclick="mark(event, 5)"></button>
-                <button  onclick="mark(event, 6)"></button>
-                <button  onclick="mark(event, 7)"></button>
-                <button  onclick="mark(event, 8)"></button>
-            </div>
-            <span id="winner__message"></h4>
+      <div class="page">
+        <h1 class="title">Jogo da velha</h1>
+        <div id="box">
+          <button onclick="mark(event, 0)"></button>
+          <button onclick="mark(event, 1)"></button>
+          <button onclick="mark(event, 2)"></button>
+          <button onclick="mark(event, 3)"></button>
+          <button onclick="mark(event, 4)"></button>
+          <button onclick="mark(event, 5)"></button>
+          <button onclick="mark(event, 6)"></button>
+          <button onclick="mark(event, 7)"></button>
+          <button onclick="mark(event, 8)"></button>
         </div>
+        <span id="winner__message">X é o primeiro jogador</span>
+        <button onclick="reload()" id="btn__reload">novo Jogo</button>
+      </div>
     </main>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
