@@ -40,30 +40,31 @@ function counter() {
         showBnt.classList = "show__btn";
     }
 }
+const verificacao = [
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+    [0,4,8],
+    [6,4,2]
+]
 
 function checkWinner() {
-    if(won(0, 1, 2)) {
-        box.classList = "winner__case1 winner";
-    } else if (won(3, 4, 5)){
-        box.classList = "winner__case2 winner";
-    } else if (won(6, 7, 8)){
-        box.classList = "winner__case3 winner";
-    } else if (won(0, 3, 6)){
-        box.classList = "winner__case4 winner";
-    }else if (won(1, 4, 7)){
-        box.classList = "winner__case5 winner";
-    } else if (won(2, 5, 8)){
-        box.classList = "winner__case6 winner";
-    }else if (won(0, 4, 8)){
-        box.classList = "winner__case7 winner";
-    } else if (won(6, 4, 2)){
-        box.classList = "winner__case8 winner";
-    } else {
-        return
-    }
-    setWinner()
-    winner = true
+    verificacao.forEach((arr, ind) => {
+       if(won(...arr)){
+        winner = true
+        box.classList = `winner__case${ind + 1} winner`
+       }
+    })
+    if(winner) setWinner()
 }
+
+function won(a, b, c) {
+    return (spacesMarked[a] === spacesMarked[b]  && spacesMarked[a] === spacesMarked[c]  && spacesMarked[a] !== '')
+}
+
 
 function setWinner() {
     showBnt.classList = "show__btn";
@@ -72,9 +73,4 @@ function setWinner() {
         return
     }
     message.innerHTML = "O é o vencedor!"
-}
-
-
-function won(a, b, c) {
-    return (spacesMarked[a] === spacesMarked[b]  && spacesMarked[a] === spacesMarked[c]  && spacesMarked[a] !== '')
 }
